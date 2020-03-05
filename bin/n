@@ -1244,6 +1244,7 @@ function show_diagnostics() {
 # which feel pretty natural.
 
 unprocessed_args=()
+N_PRESERVE_NPM="true"
 
 while [[ $# -ne 0 ]]; do
   case "$1" in
@@ -1253,7 +1254,7 @@ while [[ $# -ne 0 ]]; do
     -q|--quiet) set_quiet ;;
     -d|--download) ACTIVATE=false ;;
     --insecure) set_insecure ;;
-    -p|--preserve) N_PRESERVE_NPM="true" ;;
+#    -p|--preserve) N_PRESERVE_NPM="true" ;;
     --no-preserve) N_PRESERVE_NPM="" ;;
     --use-xz) N_USE_XZ="true" ;;
     --no-use-xz) N_USE_XZ="false" ;;
